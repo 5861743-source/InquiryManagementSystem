@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-5">מערכת פניות</h1>
+
+  <app-inquiry-list (addInquiry)="onAddInquiry()"></app-inquiry-list>
+
+  <app-inquiry-form 
+    *ngIf="showAddForm"
+    (close)="onCloseForm()"
+    (submitted)="onFormSubmitted()">
+  </app-inquiry-form>
+</div>
